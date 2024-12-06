@@ -1,0 +1,178 @@
+/* Estilos generales */
+:root {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 0px;
+  background: linear-gradient(45deg, #a31212, #2812a2);
+  min-height: 100vh;
+  color: #333;
+}
+
+.app-title{
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #fc0000;
+}
+
+.logo img{
+  width: 100px;
+}
+
+/* Estilos para la lista de películas */
+.movieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+
+}
+
+/* Contenedor de la tarjeta de película */
+.movie-card {
+  width: 200px; /* Ancho fijo para las tarjetas */
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #010101c4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  cursor: pointer;
+  margin: 15px;
+}
+
+/* Efecto de zoom y sombra al pasar el ratón */
+.movie-card:hover {
+  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+/* Estilo de la imagen de la película */
+.movie-image {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: 300px; /* Altura fija */
+  object-fit: cover; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
+  border-bottom: 3px solid #af0909; /* Línea separadora entre la imagen y el texto */
+  transition: transform 0.3s ease; /* Transición para el efecto hover */
+}
+
+/* Efecto de zoom en la imagen */
+.movie-card:hover .movie-image {
+  transform: scale(1.1); /* Escala la imagen al pasar el ratón */
+}
+
+/* Estilos para el título y género */
+.movie-card h3{
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #da0c0c;
+  text-align: center;
+}
+
+/* Estilo para el texto de género */
+.movie-card p {
+  font-size: 1rem;
+  color: #cb2121;
+  text-align: center;
+}
+
+@media(min-width: 1281px){
+  .movieList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 94px;
+    margin-left: 300px;
+    margin-right: 300px;
+    
+  }
+}
+
+footer{
+  width: 100%;
+  padding: 20px 20px;
+  background-image: url(../src/assets/img/background-footer.svg);
+  background-size: cover;
+  
+  /*background-color: #d0f0f8;
+  -webkit-mask-image: url("../Images/background-footer.svg");
+  mask-image: url("../Images/background-footer.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;*/
+}
+
+.container__footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.box__footer{
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.box__footer .logo img{
+  width: 100px;
+}
+
+.box__footer .terms{
+  max-width: 350px;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #090c02;
+  font-size: 18px;
+}
+
+.box__footer h2{
+  margin-bottom: 30px;
+  color: #090c02;
+  font-weight: 700;
+}
+
+
+.box__footer a{
+  margin-top: 10px;
+  color: #090c02;
+  font-weight: 600;
+}
+.box__footer button {
+  background: none;
+  border: none;
+  color: #090c02;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.box__footer button:hover {
+  color: #1b18dd;
+}
+
+.box__footer a:hover{
+  opacity: 0.8;
+}
+
+.box__footer a .fab{
+  font-size: 20px;
+}
+
+.box__copyright{
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.box__copyright p{
+  margin-top: 20px;
+  color: #090c02;
+}
+
+.box__copyright hr{
+  border: none;
+  height: 1px;
+  background-color: #090c02;
+}
